@@ -50,10 +50,13 @@ def process_file(file_path, nlp = nlp):
 
     return word_count, word_count_named_entities
 
-txt_file_path = './text_files/huckleberry_fin.txt'
+txt_file_path = './text_files/winnie_the_pooh.txt'
 word_count, word_count_named_entities = process_file(txt_file_path)
 
 # print 25 most common named entities
+# still finding that many person named entities should not be filtered out
+# i.e. steamboat, buck, hole, yonder (from Marc Twain's Huckleberry Finn)
+# also finding that it is missing christopher from winnie the pooh ????
 for word, count in word_count_named_entities.most_common(25):
     print(f"{word}: {count}")
 

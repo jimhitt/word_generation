@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv_word_generation/
 
 # Spyder project settings
 .spyderproject
